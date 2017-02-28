@@ -21,7 +21,15 @@ public class Order {
 		orderLines.add(ol);
 	}
 
-	public List<OrderLine> getOrderLines() {
-		return orderLines;
+	public int size() {
+		return orderLines.size();
+	}
+
+	public OrderLine get(int i) {
+		return orderLines.get(i);
+	}
+
+	public void clear() {
+		this.orderLines.clear();
 	}
 }

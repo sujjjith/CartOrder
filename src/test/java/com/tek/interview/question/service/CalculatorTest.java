@@ -18,14 +18,14 @@ public class CalculatorTest {
 		//First order
 		Order fo = new Order();
 		Item firstOrderItem1 = new Item("book", (float) 12.49);
-		OrderLine foOrderLine1 = new OrderLine(firstOrderItem1, 2);
+		OrderLine foOrderLine1 = new OrderLine(firstOrderItem1, 1);
 		fo.add(foOrderLine1);
 		
 		Item foItem2 = new Item("music CD", (float) 14.99);
 		OrderLine foOrderLine2 = new OrderLine(foItem2, 1);
 		fo.add(foOrderLine2);
 		
-		Item foItem3 = new Item("chocolate bar", (float) 0.85);
+		Item foItem3 = new Item("chocolate bar", (float)0.85);
 		OrderLine foOrderLine3 = new OrderLine(foItem3, 1);
 		fo.add(foOrderLine3);
 		
@@ -34,7 +34,7 @@ public class CalculatorTest {
 
 		//Second order
 		Order so = new Order();
-		Item soItem1 = new Item("imported box of chocolate", 10);
+		Item soItem1 = new Item("imported box of chocolate", (float) 10);
 		OrderLine soOrderLine1 = new OrderLine(soItem1, 1);
 		so.add(soOrderLine1);
 		
@@ -54,7 +54,7 @@ public class CalculatorTest {
 		OrderLine toOrderLine2 = new OrderLine(toItem2, 1);
 		to.add(toOrderLine2);
 		
-		Item toItem3 = new Item("packet of headache pills", (float) 9.75);
+		Item toItem3 = new Item("packet of headache pills", (float)9.75);
 		OrderLine toOrderLine3 = new OrderLine(toItem3,1);
 		to.add(toOrderLine3);
 		
@@ -64,7 +64,7 @@ public class CalculatorTest {
 		
 		orders.put("Order 3", to);
 		
-		assertEquals(185.9555, new Calculator().calculate(orders),0.1);
+		assertEquals(153.81, new Calculator().calculate(orders),0.1);
 	}
 	
 	@Test(expected=Exception.class)
